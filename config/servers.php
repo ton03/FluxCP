@@ -15,7 +15,7 @@ return array(
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'fluxcp',
-			'Password'   => 'TaguRO!FluxCP!',
+			'Password'   => 'CentRO!FluxCP!',
 			'Database'   => 'centro',
 			'Persistent' => true,
 			'Timezone'   => '+8:00' // Example: '+0:00' is UTC.
@@ -36,7 +36,7 @@ return array(
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'fluxcp',
-			'Password'   => 'TaguRO!FluxCP!',
+			'Password'   => 'CentRO!FluxCP!',
 			'Database'   => 'centro',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
