@@ -4,7 +4,7 @@ return array(
 	// specify multiple server groups (however they should share the same login
 	// server whilst they are allowed to have multiple char/map pairs).
 	array(
-		'ServerName'     => 'TaguRO',
+		'ServerName'     => 'CentRO',
 		// Global database configuration (excludes logs database configuration).
 		'DbConfig'       => array(
 			//'Socket'     => '/tmp/mysql.sock',
@@ -16,7 +16,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'fluxcp',
 			'Password'   => 'TaguRO!FluxCP!',
-			'Database'   => 'taguro',
+			'Database'   => 'centro',
 			'Persistent' => true,
 			'Timezone'   => '+8:00' // Example: '+0:00' is UTC.
 			// The possible values of 'Timezone' is as documented from the MySQL website:
@@ -37,7 +37,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'fluxcp',
 			'Password'   => 'TaguRO!FluxCP!',
-			'Database'   => 'taguro',
+			'Database'   => 'centro',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
 		),
@@ -52,10 +52,10 @@ return array(
 		),
 		'CharMapServers' => array(
 			array(
-				'ServerName'      => 'TaguRO',
+				'ServerName'      => 'CentRO',
 				'Renewal'         => false,
 				'MaxCharSlots'    => 9,
-				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
+				'DateTimezone'    => 'Asia/Manila', // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.
 				//'Database'        => 'ragnarok', // Defaults to DbConfig.Database
 				'ExpRates' => array(
