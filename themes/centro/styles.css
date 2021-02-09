@@ -335,18 +335,19 @@ body {
         margin-bottom: -12px; }
       #header .nav ul li a {
         box-sizing: border-box;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
-        padding-left: 32px;
+        padding-left: 24px;
         width: 255px;
         height: 72px;
         color: rgba(253, 253, 253, 0.9);
         font: 500 24px "Noto Sans JP", "Roboto", sans-serif;
-        line-height: 72px;
         text-align: center;
         text-decoration: none;
         background: url("static/swoosh.png") no-repeat 255px 0;
-        background-size: 1275px 72px;
+        background-size: 2805px 72px;
         transition: color 0.1s ease-in-out;
         cursor: pointer;
         text-shadow: 0 0 8px #002244; }
@@ -354,10 +355,10 @@ body {
           margin-bottom: 8px; }
         #header .nav ul li a:hover {
           color: #002244;
-          background-position: -1020px 0;
+          background-position: -2550px 0;
           text-shadow: none;
-          -webkit-animation: swoosh 0.05s steps(5) infinite;
-                  animation: swoosh 0.05s steps(5) infinite;
+          -webkit-animation: swoosh 0.15s steps(5) infinite;
+                  animation: swoosh 0.15s steps(5) infinite;
           -webkit-animation-iteration-count: 1;
                   animation-iteration-count: 1; }
 
@@ -365,13 +366,13 @@ body {
   from {
     background-position: 255px 0; }
   to {
-    background-position: -1020px 0; } }
+    background-position: -2550px 0; } }
 
 @keyframes swoosh {
   from {
     background-position: 255px 0; }
   to {
-    background-position: -1020px 0; } }
+    background-position: -2550px 0; } }
 
 #main .main__title {
   margin-bottom: 64px;
