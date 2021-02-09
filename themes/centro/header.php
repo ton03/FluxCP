@@ -51,15 +51,52 @@ $subMenuItems = $this->getSubMenuItems();
     <header id="header">
       <div class="header__content">
         <div class="header__logo">
-          <a href="#"></a>
+          <a href="<?= $this->url('main') ?>"></a>
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Server Info</a></li>
-            <li><a href="#">Donation</a></li>
+            <li><a href="<?= $this->url('main') ?>">News</a></li>
+            <li>
+              <a
+                href="<?= $this->url('server', 'info') ?>"
+                class="<?= $currentModule === 'server' && $currentAction === 'info' ? 'active' : '' ?>"
+              >
+                Server Info
+              </a>
+            </li>
             <li><a href="#">Download</a></li>
-            <li><a href="#">Register</a></li>
+            <?php if (!$session->isLoggedIn()): ?>
+              <li>
+                <a
+                  href="<?= $this->url('account', 'login') ?>"
+                  class="header__register-button"
+                >
+                  Login
+                </a>
+              </li>
+              <li>
+                <a
+                  href="<?= $this->url('account', 'create') ?>"
+                  class="header__register-button"
+                >
+                  Register
+                </a>
+              </li>
+            <?php else: ?>
+              <li>
+                <a
+                  href="<?= $this->url('account', 'view') ?>"
+                  class="<?= $currentModule === 'account' && $currentAction === 'view' ? 'active' : '' ?>"
+                >
+                  My Account
+                </a>
+              </li>
+              <li>
+                <a href="<?= $this->url('account', 'logout') ?>">
+                  Logout
+                </a>
+              </li>
+            <?php endif; ?>
           </ul>
         </nav>
       </div>

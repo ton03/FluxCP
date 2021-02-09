@@ -18,7 +18,7 @@ try {
         count($post['attachments']['data'])
       );
     }),
-    0, 3
+    0, 5
   );
 
   if (!empty($data)):
