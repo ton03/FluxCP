@@ -19,7 +19,7 @@
     <input
       type="hidden"
       name="server"
-      value="ArsenalRO"
+      value="CentRO"
     />
     <div class="login__username">
       <label for="login_username">Username</label>
