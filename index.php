@@ -52,6 +52,7 @@ require_once 'Flux/Installer.php';
 require_once 'Flux/PermissionError.php';
 
 // Vendor libraries.
+require_once __DIR__ . '/vendor/autoload.php';
 
 try {
 	if (!extension_loaded('pdo')) {
