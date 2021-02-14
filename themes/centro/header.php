@@ -47,7 +47,7 @@ $subMenuItems = $this->getSubMenuItems();
 </head>
 
 <body>
-  <div id="root">
+  <div id="root" class="<?= implode(' ', $mainContentClassnames) ?>">
     <header id="header">
       <div class="header__content">
         <div class="header__logo">

@@ -219,6 +219,59 @@ template {
 [hidden] {
   display: none; }
 
+a {
+  color: #337799;
+  transition: all 0.15s ease-in-out; }
+  a:hover, a:active {
+    color: #5599bb; }
+
+h2 {
+  color: #002244;
+  font-size: 20px;
+  font-weight: 500; }
+
+h3 {
+  color: #002244;
+  font-size: 18px;
+  font-weight: 500; }
+
+h4 {
+  font-size: 16px;
+  font-weight: 500; }
+
+p {
+  line-height: 26px;
+  letter-spacing: 0.5px; }
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .ul li {
+    margin-bottom: 16px;
+    padding-left: 32px; }
+    .ul li::before {
+      margin-left: -24px;
+      margin-right: 16px;
+      width: 16px;
+      display: inline;
+      color: #002244;
+      font-size: 22px;
+      font-weight: bold;
+      vertical-align: middle;
+      content: '\2022'; }
+
+ol {
+  -webkit-padding-start: 24px;
+          padding-inline-start: 24px; }
+  ol li {
+    padding-left: 12px; }
+    ol li::marker {
+      color: #002244; }
+
+.svg-filter {
+  filter: invert(92%) sepia(19%) saturate(1070%) hue-rotate(317deg) brightness(102%) contrast(98%); }
+
 html {
   height: 100%;
   min-height: 100%; }
@@ -391,7 +444,7 @@ body {
     margin-bottom: 16px;
     font-size: 14px; }
     #main .news-article .date a {
-      color: #50bdc6;
+      color: #55bbcc;
       text-decoration: none; }
   #main .news-article__img {
     margin-bottom: 16px;
@@ -402,3 +455,405 @@ body {
   background-attachment: fixed; }
   #sidebar .server-info h2 {
     font-family: "Quattrocento", serif; }
+
+.page--account--login .login__reset, .support-button, .page--account--login .login__submit {
+  padding: 0 16px 2px;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fdfdfd;
+  background-color: #002244;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out; }
+  .page--account--login .login__reset:hover, .support-button:hover, .page--account--login .login__submit:hover {
+    background-color: #225577; }
+  .page--account--login .login__reset:hover, .support-button:hover, .page--account--login .login__submit:hover, .page--account--login .login__reset:active, .support-button:active, .page--account--login .login__submit:active {
+    color: #fdfdfd; }
+  .page--account--login .login__reset svg, .support-button svg, .page--account--login .login__submit svg {
+    color: #fdfdfd; }
+
+.page--account--login .login__reset {
+  color: #002244;
+  background-color: #dbe3eb; }
+  .page--account--login .login__reset:hover {
+    color: #002244;
+    background-color: #e8edf1; }
+
+.support-button {
+  height: 48px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px; }
+
+.support-button {
+  position: relative;
+  margin: 0 auto;
+  height: 48px;
+  overflow: hidden; }
+  .support-button::before {
+    position: absolute;
+    top: -4px;
+    left: 20px;
+    width: 40px;
+    height: 92px;
+    display: block;
+    background: url("static/img/kafra.gif") no-repeat center center;
+    -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+    content: ''; }
+
+.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.table, .page--account--view table {
+  width: 100%;
+  border-collapse: collapse; }
+  .table td, .page--account--view table td {
+    padding: 12px 0; }
+  .table tr, .page--account--view table tr {
+    border-bottom: 1px solid #225577; }
+    .table tr:last-of-type, .page--account--view table tr:last-of-type {
+      border-bottom: 0; }
+
+.page--account--view .card__content > h2:first-of-type {
+  display: none; }
+
+.page--account--view .card__content > p[class="red"]:first-of-type {
+  margin-top: 0; }
+
+.page--account--view table {
+  width: 100%; }
+  .page--account--view table th,
+  .page--account--view table td {
+    text-align: left; }
+  .page--account--view table th {
+    color: #002244;
+    font-weight: 500; }
+
+.page--account--view .details .actions {
+  margin: 16px 0; }
+  .page--account--view .details .actions a {
+    padding: 0 16px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #002244;
+    color: #fdfdfd;
+    font-weight: 600;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    transition: all 0.15s ease-in-out; }
+    .page--account--view .details .actions a:hover {
+      background-color: #225577; }
+    .page--account--view .details .actions a:not(:last-of-type) {
+      margin-right: 16px; }
+    .page--account--view .details .actions a img {
+      margin: 1px 8px 0 -4px; }
+
+.page--account--view .characters,
+.page--account--view .storage {
+  margin-top: 48px; }
+  .page--account--view .characters table tr:first-of-type th,
+  .page--account--view .storage table tr:first-of-type th {
+    padding: 12px 0; }
+
+.page--account--view .storage td {
+  padding: 8px 0;
+  font-size: 14px; }
+
+.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.page--account--login .login {
+  margin: 0 0 32px !important;
+  padding: 0 !important; }
+  .page--account--login .login > form {
+    width: 320px; }
+  .page--account--login .login__error {
+    display: block; }
+  .page--account--login .login__username, .page--account--login .login__password {
+    margin-top: 0; }
+    .page--account--login .login__username label, .page--account--login .login__password label {
+      position: unset;
+      padding: unset;
+      background-color: unset;
+      font-weight: 400; }
+  .page--account--login .login__actions {
+    display: flex;
+    flex-direction: row; }
+  .page--account--login .login__submit {
+    margin-right: 16px; }
+
+.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.page--account--create .register {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; }
+  .page--account--create .register__form, .page--account--create .register__guidelines {
+    flex-grow: 1;
+    flex-basis: 0; }
+  .page--account--create .register__form {
+    margin-right: 32px; }
+    .page--account--create .register__form__field--gender .options {
+      display: flex;
+      flex-direction: row; }
+      .page--account--create .register__form__field--gender .options label {
+        position: relative;
+        width: 152px;
+        height: 40px;
+        display: inline-flex;
+        cursor: pointer; }
+        .page--account--create .register__form__field--gender .options label:not(:last-of-type) {
+          margin-right: 16px; }
+        .page--account--create .register__form__field--gender .options label::before {
+          position: absolute;
+          top: 0;
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center center;
+          -ms-interpolation-mode: nearest-neighbor;
+              image-rendering: -moz-crisp-edges;
+              image-rendering: pixelated;
+          content: ''; }
+        .page--account--create .register__form__field--gender .options label:nth-child(1)::before {
+          left: 32px;
+          background-image: url("static/male.gif"); }
+        .page--account--create .register__form__field--gender .options label:nth-child(2)::before {
+          left: 24px;
+          background-image: url("static/female.gif"); }
+      .page--account--create .register__form__field--gender .options input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        cursor: pointer; }
+      .page--account--create .register__form__field--gender .options span {
+        width: 100%;
+        height: 100%;
+        padding-left: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #002244;
+        color: #fdfdfd;
+        font-weight: 500;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+        border-radius: 2px; }
+        .page--account--create .register__form__field--gender .options span:hover {
+          background-color: #225577; }
+      .page--account--create .register__form__field--gender .options input:checked ~ span {
+        background-color: #55bbcc;
+        color: #fdfdfd; }
+    .page--account--create .register__form__field--birthdate .date-field {
+      font-size: 0; }
+      .page--account--create .register__form__field--birthdate .date-field * {
+        font-size: 16px; }
+      .page--account--create .register__form__field--birthdate .date-field select {
+        padding: 0 8px;
+        height: 36px;
+        box-sizing: border-box;
+        outline: 0; }
+        .page--account--create .register__form__field--birthdate .date-field select:not(:last-child) {
+          margin-right: 8px; }
+    .page--account--create .register__form__submit {
+      width: 320px;
+      height: 40px;
+      background-color: #002244;
+      color: #fdfdfd;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 0;
+      border-radius: 2px;
+      cursor: pointer; }
+  .page--account--create .register__guidelines h3 {
+    margin-top: 0; }
+
+.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.page--account--resetpass .resetpass {
+  margin-bottom: 32px; }
+  .page--account--resetpass .resetpass__userid small, .page--account--resetpass .resetpass__email small {
+    margin-top: 8px; }
+  .page--account--resetpass .resetpass__submit {
+    width: 320px;
+    height: 40px;
+    background-color: #002244;
+    color: #fdfdfd;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 0;
+    cursor: pointer; }

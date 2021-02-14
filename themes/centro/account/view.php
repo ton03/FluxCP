@@ -76,7 +76,7 @@
       class="report-an-issue-button"
     >
       <img
-        src="<?= $this->themePath('static/img/messenger.svg') ?>"
+        src="<?= $this->themePath('static/messenger.svg') ?>"
         alt="Facebook Messenger"
         width="18"
         height="18"

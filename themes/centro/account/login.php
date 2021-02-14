@@ -70,13 +70,18 @@
         <?php endif ?>
       </div>
     <?php endif ?>
-    <input
-      type="submit"
-      value="Login"
-      class="login__submit"
-    />
+    <div class="login__actions">
+      <input
+        type="submit"
+        value="Login"
+        class="login__submit"
+      />
+      <a
+        href="<?= $this->url('account', 'resetpass') ?>"
+        class="login__reset"
+      >
+        Reset Password
+      </a>
+    </div>
   </form>
-  <div class="login__links">
-    <a href="<?= $this->url('account', 'resetpass') ?>">Reset Password</a>
-  </div>
 </div>
