@@ -455,7 +455,7 @@ body {
   background: #fafbfc url("static/town_bg.png") no-repeat right bottom;
   background-attachment: fixed; }
   #sidebar .server-info h2 {
-    font-family: "Quattrocento", serif; }
+    font-size: 24px; }
 
 .page--account--login .login__reset, .support-button, .page--account--view .details .actions a, .page--account--changemail .changemail__submit, .page--account--changepass .changepass__submit, .page--account--login .login__submit, .page--account--resetpass .resetpass__submit {
   padding: 0 16px 2px;

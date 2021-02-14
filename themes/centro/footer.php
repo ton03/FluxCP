@@ -4,13 +4,20 @@
       <div class="sidebar__content">
         <section class="server-info">
           <h2>Server Information</h2>
-          <p>Server Time: 5:04:02 PM</p>
-          <p>Status: Online</p>
-          <p>Rates: 5X / 5X / 3X</p>
+          <p>Time: <span class="server-time"></span></p>
+          <p class="status <?= $isServerUp ? 'status--online' : '' ?>">
+            Status: <?= $isServerUp ? 'Online' : 'Maintenance' ?>
+          </p>
+          <p class="rates__normal">Rates: 30x EXP, 2x Drop</p>
+          <p>
+            Happy Hour Schedule:<br />
+            2:00 to 4:00 AM/PM<br />
+            8:00 to 10:00 AM/PM
+          </p>
         </section>
       </div>
     </aside>
   </div>
-  <script src="scripts.js"></script>
+  <script src="<?php echo $this->themePath('scripts.js') ?>"></script>
 </body>
 </html>
