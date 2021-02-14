@@ -227,17 +227,15 @@ a {
 
 h2 {
   color: #002244;
-  font-size: 20px;
-  font-weight: 500; }
+  font: 600 20px "Quattrocento", serif; }
 
 h3 {
   color: #002244;
-  font-size: 18px;
-  font-weight: 500; }
+  font: 600 18px "Quattrocento", serif; }
 
 h4 {
-  font-size: 16px;
-  font-weight: 500; }
+  color: #002244;
+  font: 500 16px "Quattrocento", serif; }
 
 p {
   line-height: 26px;
@@ -251,14 +249,14 @@ p {
     margin-bottom: 16px;
     padding-left: 32px; }
     .ul li::before {
+      margin-top: -8px;
       margin-left: -24px;
       margin-right: 16px;
       width: 16px;
       display: inline;
       color: #002244;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
-      vertical-align: middle;
       content: '\2022'; }
 
 ol {
@@ -934,3 +932,11 @@ body {
   margin-bottom: 32px; }
   .page--account--resetpass .resetpass__userid small, .page--account--resetpass .resetpass__email small {
     margin-top: 8px; }
+
+.page--server--info {
+  font-size: 16px; }
+  .page--server--info .ul li {
+    margin-bottom: 8px; }
+  .page--server--info h2 {
+    font: 600 24px "Quattrocento", serif;
+    margin-top: 36px; }
