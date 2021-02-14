@@ -80,6 +80,7 @@
         alt="Facebook Messenger"
         width="18"
         height="18"
+        class="svg-light"
       />
       Report an Issue
     </a>

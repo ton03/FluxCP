@@ -269,8 +269,11 @@ ol {
     ol li::marker {
       color: #002244; }
 
-.svg-filter {
-  filter: invert(92%) sepia(19%) saturate(1070%) hue-rotate(317deg) brightness(102%) contrast(98%); }
+.svg-primary {
+  filter: invert(13%) sepia(33%) saturate(2369%) hue-rotate(183deg) brightness(94%) contrast(106%); }
+
+.svg-light {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(102%) contrast(104%); }
 
 html {
   height: 100%;
@@ -456,7 +459,7 @@ body {
   #sidebar .server-info h2 {
     font-family: "Quattrocento", serif; }
 
-.page--account--login .login__reset, .support-button, .page--account--login .login__submit {
+.page--account--login .login__reset, .support-button, .page--account--view .details .actions a, .page--account--changemail .changemail__submit, .page--account--changepass .changepass__submit, .page--account--login .login__submit, .page--account--resetpass .resetpass__submit {
   padding: 0 16px 2px;
   height: 40px;
   box-sizing: border-box;
@@ -470,13 +473,14 @@ body {
   text-decoration: none;
   text-shadow: none;
   border: 0;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.15s ease-in-out; }
-  .page--account--login .login__reset:hover, .support-button:hover, .page--account--login .login__submit:hover {
+  .page--account--login .login__reset:hover, .support-button:hover, .page--account--view .details .actions a:hover, .page--account--changemail .changemail__submit:hover, .page--account--changepass .changepass__submit:hover, .page--account--login .login__submit:hover, .page--account--resetpass .resetpass__submit:hover {
     background-color: #225577; }
-  .page--account--login .login__reset:hover, .support-button:hover, .page--account--login .login__submit:hover, .page--account--login .login__reset:active, .support-button:active, .page--account--login .login__submit:active {
+  .page--account--login .login__reset:hover, .support-button:hover, .page--account--view .details .actions a:hover, .page--account--changemail .changemail__submit:hover, .page--account--changepass .changepass__submit:hover, .page--account--login .login__submit:hover, .page--account--resetpass .resetpass__submit:hover, .page--account--login .login__reset:active, .support-button:active, .page--account--view .details .actions a:active, .page--account--changemail .changemail__submit:active, .page--account--changepass .changepass__submit:active, .page--account--login .login__submit:active, .page--account--resetpass .resetpass__submit:active {
     color: #fdfdfd; }
-  .page--account--login .login__reset svg, .support-button svg, .page--account--login .login__submit svg {
+  .page--account--login .login__reset svg, .support-button svg, .page--account--view .details .actions a svg, .page--account--changemail .changemail__submit svg, .page--account--changepass .changepass__submit svg, .page--account--login .login__submit svg, .page--account--resetpass .resetpass__submit svg {
     color: #fdfdfd; }
 
 .page--account--login .login__reset {
@@ -510,24 +514,24 @@ body {
         image-rendering: pixelated;
     content: ''; }
 
-.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
   margin-bottom: 16px;
   padding: 12px;
   width: 320px;
   background-color: rgba(204, 0, 0, 0.1);
   color: #cc0000;
   box-sizing: border-box;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
-.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column; }
-  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
     margin-bottom: 8px;
     color: #225577;
     font-size: 16px; }
-  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
     padding-left: 8px;
     padding-right: 8px;
     width: 320px;
@@ -537,11 +541,11 @@ body {
     outline: 0;
     box-sizing: border-box;
     border: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     opacity: 0.9;
     border: 1px solid rgba(0, 34, 68, 0.5);
     transition: all 0.15s ease-in-out; }
-    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
       border: 1px solid #002244;
       opacity: 1; }
 
@@ -580,19 +584,7 @@ body {
 .page--account--view .details .actions {
   margin: 16px 0; }
   .page--account--view .details .actions a {
-    padding: 0 16px;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    background-color: #002244;
-    color: #fdfdfd;
-    font-weight: 600;
-    text-decoration: none;
-    vertical-align: middle;
-    border-radius: 2px;
-    transition: all 0.15s ease-in-out; }
-    .page--account--view .details .actions a:hover {
-      background-color: #225577; }
+    display: inline-flex; }
     .page--account--view .details .actions a:not(:last-of-type) {
       margin-right: 16px; }
     .page--account--view .details .actions a img {
@@ -609,24 +601,24 @@ body {
   padding: 8px 0;
   font-size: 14px; }
 
-.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
   margin-bottom: 16px;
   padding: 12px;
   width: 320px;
   background-color: rgba(204, 0, 0, 0.1);
   color: #cc0000;
   box-sizing: border-box;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
-.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column; }
-  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
     margin-bottom: 8px;
     color: #225577;
     font-size: 16px; }
-  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
     padding-left: 8px;
     padding-right: 8px;
     width: 320px;
@@ -636,11 +628,105 @@ body {
     outline: 0;
     box-sizing: border-box;
     border: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     opacity: 0.9;
     border: 1px solid rgba(0, 34, 68, 0.5);
     transition: all 0.15s ease-in-out; }
-    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.page--account--changemail .changemail {
+  margin-bottom: 32px; }
+  .page--account--changemail .changemail__email small {
+    margin-top: 8px; }
+
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+      border: 1px solid #002244;
+      opacity: 1; }
+
+[data-error]::after {
+  margin-top: 8px;
+  display: block;
+  color: #ff8080;
+  font-size: 12px;
+  content: attr(data-error); }
+
+.page--account--changepass .changepass {
+  margin-bottom: 32px; }
+  .page--account--changepass .changepass__currentpass small, .page--account--changepass .changepass__newpass small, .page--account--changepass .changepass__confirmnewpass small {
+    margin-top: 8px; }
+
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+  margin-bottom: 16px;
+  padding: 12px;
+  width: 320px;
+  background-color: rgba(204, 0, 0, 0.1);
+  color: #cc0000;
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; }
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+    margin-bottom: 8px;
+    color: #225577;
+    font-size: 16px; }
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    height: 40px;
+    background: #fafdff;
+    font-size: 18px;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    opacity: 0.9;
+    border: 1px solid rgba(0, 34, 68, 0.5);
+    transition: all 0.15s ease-in-out; }
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
       border: 1px solid #002244;
       opacity: 1; }
 
@@ -671,24 +757,24 @@ body {
   .page--account--login .login__submit {
     margin-right: 16px; }
 
-.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
   margin-bottom: 16px;
   padding: 12px;
   width: 320px;
   background-color: rgba(204, 0, 0, 0.1);
   color: #cc0000;
   box-sizing: border-box;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
-.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column; }
-  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
     margin-bottom: 8px;
     color: #225577;
     font-size: 16px; }
-  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
     padding-left: 8px;
     padding-right: 8px;
     width: 320px;
@@ -698,11 +784,11 @@ body {
     outline: 0;
     box-sizing: border-box;
     border: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     opacity: 0.9;
     border: 1px solid rgba(0, 34, 68, 0.5);
     transition: all 0.15s ease-in-out; }
-    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
       border: 1px solid #002244;
       opacity: 1; }
 
@@ -770,7 +856,7 @@ body {
         font-weight: 500;
         transition: all 0.15s ease-in-out;
         box-sizing: border-box;
-        border-radius: 2px; }
+        border-radius: 4px; }
         .page--account--create .register__form__field--gender .options span:hover {
           background-color: #225577; }
       .page--account--create .register__form__field--gender .options input:checked ~ span {
@@ -784,7 +870,8 @@ body {
         padding: 0 8px;
         height: 36px;
         box-sizing: border-box;
-        outline: 0; }
+        outline: 0;
+        border-radius: 4px; }
         .page--account--create .register__form__field--birthdate .date-field select:not(:last-child) {
           margin-right: 8px; }
     .page--account--create .register__form__submit {
@@ -796,29 +883,29 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border: 0;
-      border-radius: 2px;
+      border-radius: 4px;
       cursor: pointer; }
   .page--account--create .register__guidelines h3 {
     margin-top: 0; }
 
-.page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
+.page--account--changemail .changemail__error, .page--account--changepass .changepass__error, .page--account--login .login__error, .page--account--create .register__form__error, .page--account--resetpass .resetpass__error {
   margin-bottom: 16px;
   padding: 12px;
   width: 320px;
   background-color: rgba(204, 0, 0, 0.1);
   color: #cc0000;
   box-sizing: border-box;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
-.page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
+.page--account--changemail .changemail__email, .page--account--changepass .changepass__currentpass, .page--account--changepass .changepass__newpass, .page--account--changepass .changepass__confirmnewpass, .page--account--login .login__username, .page--account--login .login__password, .page--account--create .register__form__field, .page--account--resetpass .resetpass__userid, .page--account--resetpass .resetpass__email {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column; }
-  .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
+  .page--account--changemail .changemail__email > label, .page--account--changepass .changepass__currentpass > label, .page--account--changepass .changepass__newpass > label, .page--account--changepass .changepass__confirmnewpass > label, .page--account--login .login__username > label, .page--account--login .login__password > label, .page--account--create .register__form__field > label, .page--account--resetpass .resetpass__userid > label, .page--account--resetpass .resetpass__email > label {
     margin-bottom: 8px;
     color: #225577;
     font-size: 16px; }
-  .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
+  .page--account--changemail .changemail__email > input, .page--account--changepass .changepass__currentpass > input, .page--account--changepass .changepass__newpass > input, .page--account--changepass .changepass__confirmnewpass > input, .page--account--login .login__username > input, .page--account--login .login__password > input, .page--account--create .register__form__field > input, .page--account--resetpass .resetpass__userid > input, .page--account--resetpass .resetpass__email > input {
     padding-left: 8px;
     padding-right: 8px;
     width: 320px;
@@ -828,11 +915,11 @@ body {
     outline: 0;
     box-sizing: border-box;
     border: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     opacity: 0.9;
     border: 1px solid rgba(0, 34, 68, 0.5);
     transition: all 0.15s ease-in-out; }
-    .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
+    .page--account--changemail .changemail__email > input:focus, .page--account--changepass .changepass__currentpass > input:focus, .page--account--changepass .changepass__newpass > input:focus, .page--account--changepass .changepass__confirmnewpass > input:focus, .page--account--login .login__username > input:focus, .page--account--login .login__password > input:focus, .page--account--create .register__form__field > input:focus, .page--account--resetpass .resetpass__userid > input:focus, .page--account--resetpass .resetpass__email > input:focus, .page--account--changemail .changemail__email > input:active, .page--account--changepass .changepass__currentpass > input:active, .page--account--changepass .changepass__newpass > input:active, .page--account--changepass .changepass__confirmnewpass > input:active, .page--account--login .login__username > input:active, .page--account--login .login__password > input:active, .page--account--create .register__form__field > input:active, .page--account--resetpass .resetpass__userid > input:active, .page--account--resetpass .resetpass__email > input:active {
       border: 1px solid #002244;
       opacity: 1; }
 
@@ -847,13 +934,3 @@ body {
   margin-bottom: 32px; }
   .page--account--resetpass .resetpass__userid small, .page--account--resetpass .resetpass__email small {
     margin-top: 8px; }
-  .page--account--resetpass .resetpass__submit {
-    width: 320px;
-    height: 40px;
-    background-color: #002244;
-    color: #fdfdfd;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: 0;
-    cursor: pointer; }
